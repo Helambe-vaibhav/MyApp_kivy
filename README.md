@@ -7,12 +7,14 @@ by using the Python language for andriod app developemant
 This app contain lifeGoal ,account and skills 
 
 MainScreen 
+
 ![MainScreen](https://user-images.githubusercontent.com/93052064/214343462-c88db942-140b-47b7-9f6c-4bd468c55869.jpg)
 
 LifeGaol Screen 
 This page shows your lifegoal and time to complte it 
 we can change lifeGoal 
 The button will show remainin time to complte your Lifegoal
+
 ![LifeGoal1](https://user-images.githubusercontent.com/93052064/214344414-534951c6-bffb-4e8d-a695-7817a430591e.jpg)
 ![Lifegoal2](https://user-images.githubusercontent.com/93052064/214344433-ab1d5c01-f5a2-40f2-a787-e0848058941e.jpg)
 
