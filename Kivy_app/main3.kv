@@ -1,0 +1,158 @@
+# this kv file is loaded at start to include all the design ,buttons  
+# Helambe Vaibhav
+# version 1.0
+
+<MainScreen>:
+    name: "MainScreen"
+    MDLabel:
+        text: "Your Time"
+        halign: "center"
+        pos_hint: {"center_x": 0.5, "center_y": 0.95}
+        font_style: "H4"
+    MDFlatButton:
+        id: time_label  
+        text: ""
+        halign: 'center'
+        pos_hint: {"center_x": 0.5, "center_y": 0.9}
+        theme_text_color: "Custom"
+        text_color: (1, 0, 0, 1)
+        on_press: root.go_to_life_goal()
+        font_style: "H5"
+    MDFlatButton:
+        id : CurrentAccountBalance
+        text: "Balance : 0"
+        halign: 'center'
+        theme_text_color: 'Primary'
+        pos_hint: {"center_x": 0.3, "center_y": 0.82}
+        on_press: root.go_to_Acccount()
+        font_style :"H6"
+    MDFlatButton:
+        id : Skills
+        text: "Skills"
+        halign: 'center'
+        theme_text_color: 'Primary'
+        pos_hint: {"center_x": 0.74, "center_y": 0.82}
+        on_press: root.go_to_skillsCat()
+        font_style :"H6"
+
+<LifeGoal>:
+    name: "LifeGoal"
+    MDLabel:
+        text: "Life Goal"
+        halign: "center"
+        pos_hint: {"center_x": 0.5, "center_y": 0.95}
+        font_style: "H4"
+    MDFloatingActionButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x": 0.1, "center_y": 0.1}
+        on_press: root.go_to_main_screen()
+    MDLabel:
+        text: "Date : "
+        halign: "center"
+        pos_hint: {"center_x": 0.2, "center_y": 0.8}
+        font_style: "H5"
+    MDLabel:
+        id: date_label
+        text: ''
+        halign: 'center'
+        pos_hint: {"center_x": 0.55, "center_y": 0.8}
+        font_style: "H5"
+    MDLabel:
+        text: "Goal : "
+        halign: "center"
+        pos_hint: {"center_x": 0.2, "center_y": 0.7}
+        font_style: "H5"
+    MDLabel:
+        id: goal_label
+        text: ''
+        halign: 'center'
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        font_style: "H5"
+    MDFloatingActionButton:
+        id: edit_button
+        icon: "pencil"
+        pos_hint: {"center_x": 0.9, "center_y": 0.1}
+        on_press: root.edit_life_goal()
+
+<Account>:
+    name: "Account"
+    MDLabel:
+        text: "Account"
+        halign: "center"
+        pos_hint: {"center_x": 0.5, "center_y": 0.95}
+        font_style: "H4"
+    # MD floating action button to go to main screen
+    MDFloatingActionButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x": 0.1, "center_y": 0.1}
+        on_press: root.go_to_main_screen()
+    MDLabel:
+        text: "Balance : Rs "
+        halign: "center"
+        pos_hint: {"center_x": 0.2, "center_y": 0.8}
+        font_style:'Subtitle1'
+    MDLabel:
+        id: total_balance_label
+        text: "1000000"
+        halign: "center"
+        pos_hint: {"center_x": 0.5, "center_y": 0.8}
+        font_style: 'Subtitle1'
+    MDFloatingActionButton:
+        icon: "plus"
+        id : add_transaction_button
+        pos_hint: {"center_x": 0.9, "center_y": 0.1}
+        on_press: root.add_new_transaction()
+    MDTextField:
+        id: description_textfield
+        hint_text: "Enter description"
+        pos_hint: {"center_x": 0.5, "center_y": 0.7}
+        size_hint_x: None
+        width: 150
+    MDTextField:
+        id: amount_textfield
+        hint_text: "Enter amount"
+        pos_hint: {"center_x": 0.5, "center_y": 0.6}
+        size_hint_x: None
+        width: 150
+    MDFloatingActionButton:
+        id: income_button
+        icon: "arrow-up"
+        pos_hint: {"center_x": 0.3, "center_y": 0.5}
+        on_press: root.income_button_pressed()
+    MDFloatingActionButton:
+        id: expense_button
+        icon: "arrow-down"
+        pos_hint: {"center_x": 0.7, "center_y": 0.5}
+        on_press: root.expense_button_pressed()
+    MDLabel:
+        text: "Income"
+        halign: "center"
+        pos_hint: {"center_x": 0.3, "center_y": 0.4}
+        font_style: "Subtitle1"
+    MDLabel:
+        text: "Expense"
+        halign: "center"
+        pos_hint: {"center_x": 0.7, "center_y": 0.4}
+        font_style: "Subtitle1"
+
+<SkillsCat>:
+    name: "Skills"
+    MDLabel:
+        text: "Skills"
+        halign: "center"
+        pos_hint: {"center_x": 0.5, "center_y": 0.9}
+        font_style: "H4"
+    MDFloatingActionButton:
+        icon: "arrow-left"
+        pos_hint: {"center_x": 0.1, "center_y": 0.1}
+        on_press: root.go_to_main_screen()
+    MDFlatButton:
+        id: "save_button"
+        text: "Save"
+        pos_hint: {"center_x": 0.8, "center_y": 0.8}
+        on_press: root.save_category()
+    
+    
+
+    
+    

@@ -1,0 +1,5 @@
+kivy     -2.0.0 
+kivyMD   -0.104.1
+sqlite3  -3.31.1
+python   -3.8.2
+
